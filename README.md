@@ -8,11 +8,12 @@ HauteLook Engineering is a complex, rapidly-changing environment that requires o
 This test assumes that VirtualBox > 4.3 (https://www.virtualbox.org/wiki/Downloads) as well as Vagrant > 1.7.2 (http://www.vagrantup.com/downloads.html) are installed. The `vagrant-plugin-cachier` plugin is highly recommended as well. Running `vagrant up` in the project directory will produce a minimal CentOS 6.5 box with `puppet` and `git` installed. 
 
 ## Requirements
-The completed test must yield a working web page at http://localhost:8080 with a single invocation of `vagrant up`. Submissions that do not meet this requirement are an automatic failure. The candidate is to modify and enhance the Puppet code in the project to meet these requirements:
+This test is intended to take 60-90 minutes to complete. The completed test must yield a working web page at http://localhost:8080 with a single invocation of `vagrant up`. Submissions that do not meet this requirement are an automatic failure. The candidate is to modify and enhance the Puppet code in the project to meet these requirements:
 
 - Install and configure PHP-FPM
 - Install and configure NGINX to proxy web requests to PHP-FPM
 - Deploy app.php (in project directory) to web root
+- Services must survive a reboot (`vagrant reload`)
 - SELinux must remain enabled
 - No `exec` statements
 
