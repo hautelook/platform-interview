@@ -68,5 +68,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     puppet.manifests_path = "manifests/"
     puppet.manifest_file  = "vagrant.pp"
   end
+  config.vm.provision "ansible" do |ansible|
+    ansible.playbook = "ansible/vagrant.yml"
+  end
 
 end
