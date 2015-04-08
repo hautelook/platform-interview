@@ -71,5 +71,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision "ansible" do |ansible|
     ansible.playbook = "ansible/vagrant.yml"
   end
+  config.vm.provision "chef_solo" do |chef|
+    chef.roles_path = "roles"
+    chef.add_role("web_server")
+  end
 
 end
