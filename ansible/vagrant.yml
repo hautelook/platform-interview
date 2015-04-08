@@ -1,5 +1,5 @@
 ---
 - hosts: all
   tasks:
-    - name: Print hostname
-      command: hostname
+    - name: Install git 
+      yum: name=git state=present
