@@ -1,6 +1,7 @@
 .idea
 *~
-/.vagrant
+.vagrant/
 /.librarian
 .tmp/
 modules/
+
